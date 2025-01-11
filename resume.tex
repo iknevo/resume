@@ -1,3 +1,94 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.7.2, 28 Aug 2024) written by LianTze Lim (liantze@gmail.com), based on the
+% CV created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and simpleicons packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/simpleicons for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+% WHEN COMPILING WITH XELATEX PLEASE USE
+% xelatex -shell-escape -output-driver="xdvipdfmx -z 0" mmayer.tex
+\iftutex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{black}{HTML}{000000}
+\definecolor{black}{HTML}{000000}
+\definecolor{LightGrey}{HTML}{666666}
+% \colorlet{name}{black}
+% \colorlet{tagline}{PastelRed}
+\colorlet{heading}{black}
+\colorlet{headingrule}{black}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{black}
+\colorlet{emphasis}{black}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+% ...and the markers for the date/location for \cvevent
+% \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
+% \renewcommand{\cvLocationMarker}{\faMapMarker*}
+
+
+% If your CV/résumé is in a language other than English,
+% then you probably want to change these so that when you
+% copy-paste from the PDF or run pdftotext, the location
+% and date marker icons for \cvevent will paste as correct
+% translations. For example Spanish:
+% \renewcommand{\locationname}{Ubicación}
+% \renewcommand{\datename}{Fecha}
+
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+% \input{pubs-authoryear.tex}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+\input{pubs-num.tex}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
 \name{Ahmed Abdelhafiez}
 \tagline{Front-End React Developer}
 
@@ -6,7 +97,7 @@
   \vspace{0.3cm}
   \faMapPin {Cairo, Egypt}
   \hspace{0.2cm}
-  \href{mailto:nevoexits@gmail.com}{\faEnvelope nevoexists@gmail.com}   
+  \href{mailto:nevoexits@gmail.com}{\faEnvelope nevoexists@gmail.com}
   \hspace{0.2cm}
   \href{https://www.linkedin.com/in/ahmed-abdelhafiez-8470702a4/?originalSubdomain=eg}{\faLinkedin Ahmed Abdelhafiez}
   \hspace{0.2cm}
@@ -29,7 +120,7 @@
 \begin{itemize}
 \item Simple web app quiz containing questions about React.js with features like Progress bar , total score , highest score and a timer to handle quiz duration.
 \item tools : React.js , CSS
-\item \href{https://nevo-react-quiz.vercel.app/}{\faGlobe \hspace{0.01cm} PREVIEW} 
+\item \href{https://nevo-react-quiz.vercel.app/}{\faGlobe \hspace{0.01cm} PREVIEW}
 \item \href{https://github.com/iknevo/react-quiz}{\faCode \hspace{0.01cm} Code }
 
 
@@ -41,7 +132,7 @@
 \begin{itemize}
 \item Foodie is a recipe web app that allows users to search , view, bookmark and upload custom recipes
 \item tools : HTML , CSS/SASS , JS , Parcel , API
-\item \href{https://nevo-foodie.vercel.app/}{\faGlobe \hspace{0.01cm} PREVIEW} 
+\item \href{https://nevo-foodie.vercel.app/}{\faGlobe \hspace{0.01cm} PREVIEW}
 \item \href{https://github.com/iknevo/foodie}{\faCode \hspace{0.01cm} Code }
 
 
@@ -52,8 +143,8 @@
 \cvevent{}{To-Do}{Sep 2024}{}
 \begin{itemize}
 \item To-Do app with the ability to create multiple To-Do lists and some cool things
-\item tools : HTML , CSS , JS 
-\item \href{https://nevo-todo.netlify.app/}{\faGlobe \hspace{0.01cm} PREVIEW} 
+\item tools : HTML , CSS , JS
+\item \href{https://nevo-todo.netlify.app/}{\faGlobe \hspace{0.01cm} PREVIEW}
 \item \href{https://github.com/iknevo/to-do-app}{\faCode \hspace{0.01cm} Code }
 
 
@@ -63,8 +154,8 @@
 \cvevent{}{Natours}{Oct 2024}{}
 \begin{itemize}
 \item Simple landing page with some effects going on
-\item tools : HTML , CSS/SASS , JS 
-\item \href{https://nevo-natours.netlify.app/}{\faGlobe \hspace{0.01cm} PREVIEW} 
+\item tools : HTML , CSS/SASS , JS
+\item \href{https://nevo-natours.netlify.app/}{\faGlobe \hspace{0.01cm} PREVIEW}
 \item \href{https://github.com/iknevo/natours}{\faCode \hspace{0.01cm} Code }
 
 
@@ -125,7 +216,7 @@
 
 \cvsection{Soft Skills}
 
-{\LaTeXraggedright 
+{\LaTeXraggedright
 \cvtag{Learning Potential}
 \cvtag{Organization}
 \cvtag{Responsibility}
@@ -135,3 +226,5 @@
 
 
 \end{paracol}
+
+\end{document}
